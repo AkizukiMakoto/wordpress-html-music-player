@@ -1,0 +1,198 @@
+<div class="music-player-container">
+    <!-- 音乐播放器区域 -->
+    <div class="music-player">
+        <div class="cover">
+            <img id="coverImg" src="https://www.ylk.ink/wp-content/uploads/2025/02/1739348754-Cover.jpg" alt="瑠璃色の夜へ 封面">
+        </div>
+        <div class="content">
+            <div class="info">
+                <div class="title">瑠璃色の夜へ</div>
+                <p class="artist">
+                    <a href="https://akinanakamoriofficial.com/" target="_blank" class="artist-link">中森明菜</a>
+                </p>
+            </div>
+            <!-- HTML5 原生音频控件 -->
+            <div class="audio-wrapper">
+                <audio controls id="audioPlayer">
+                    <source src="https://www.ylk.ink/wp-content/uploads/2025/02/1739348801-瑠璃色の夜へ-中森明菜.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放。
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<style>
+    /* 播放器整体美化 */
+    .music-player-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background: url('https://www.ylk.ink/wp-content/uploads/2025/02/1739348754-Cover.jpg') no-repeat center center;
+        background-size: cover;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 现代化阴影 */
+        padding: 25px;
+        max-width: 850px;
+        margin: 20px auto;
+        position: relative;
+        overflow: hidden;
+        animation: glowEffect 4s infinite alternate;
+    }
+ 
+    /* 轻微光效 */
+    @keyframes glowEffect {
+        from { box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
+        to { box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); }
+    }
+ 
+    /* 遮罩层增强可读性 */
+    .music-player-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+        border-radius: 15px;
+        z-index: 1;
+        pointer-events: none;
+    }
+ 
+    .music-player {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+ 
+    /* 封面动效 */
+    .music-player .cover img {
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+ 
+    /* 悬停封面浮起 */
+    .music-player .cover img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+    }
+ 
+    /* 播放时封面缩放 */
+    .playing {
+        transform: scale(1.1) !important;
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+    }
+ 
+    /* 内容区域 */
+    .music-player .content {
+        flex: 1;
+        margin-left: 20px;
+    }
+ 
+    .music-player .info .title {
+        font-size: 20px;
+        margin: 0 0 5px 0;
+        color: #fff;
+        font-weight: bold;
+    }
+ 
+    .music-player .info .artist {
+        font-size: 14px;
+        color: #f5f5f5;
+        margin: 0;
+    }
+ 
+    .music-player .info .artist a {
+        color: #f5f5f5;
+        text-decoration: none;
+        font-weight: normal;
+    }
+ 
+    .music-player .info .artist a:hover {
+        text-decoration: underline;
+    }
+ 
+    /* 音频控件容器 */
+    .audio-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+ 
+    /* 音频控件 */
+    audio {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: 32px;
+        background: transparent;
+        border-radius: 8px; /* 圆角 */
+        opacity: 0.9;
+        transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+ 
+    /* 播放时音频控件增强 */
+    audio:focus,
+    audio:hover {
+        opacity: 1;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    }
+ 
+    /* 移动端优化 */
+    @media (max-width: 600px) {
+        .music-player {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+ 
+        .music-player .cover img {
+            width: 100px;
+            height: 100px;
+        }
+ 
+        .music-player .content {
+            margin-left: 0;
+            width: 100%;
+        }
+ 
+        .audio-wrapper {
+            width: 100%;
+            margin-top: 15px;
+        }
+ 
+        audio {
+            width: 100%;
+            max-width: none;
+        }
+    }
+</style>
+ 
+<script>
+    const audio = document.getElementById('audioPlayer');
+    const coverImg = document.getElementById('coverImg');
+ 
+    // 监听音频播放状态
+    audio.addEventListener('play', () => {
+        coverImg.classList.add('playing');
+    });
+ 
+    audio.addEventListener('pause', () => {
+        coverImg.classList.remove('playing');
+    });
+ 
+    audio.addEventListener('ended', () => {
+        coverImg.classList.remove('playing');
+    });
+</script>
+
+
+ref(APA): Makoto.Makoto.https://www.ylk.ink. Retrieved 2025/3/12.
