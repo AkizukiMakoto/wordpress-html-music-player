@@ -1,9 +1,10 @@
 # 🎵 自定义音频播放器模块 / Custom Audio Player Module
 
-**🌍 选择语言 / Select Language:**  
+🌍 **选择语言 / Select Language:**  
 🇨🇳 [中文](#📜-中文说明) | 🇺🇸 [English](#📜-english-version)
 
 ---
+
 ## 📜 中文说明
 
 ### 🎵 介绍
@@ -42,47 +43,3 @@
         </div>
     </div>
 </div>
-
-## 📜 English Version
-
-### 🎵 Introduction
-This is a custom audio player module designed to replace the default WordPress or HTML5 audio player.  
-With continuous improvements and AI assistance, it now meets my needs perfectly.
-
-### 🔧 How to Use
-1. **Open your WordPress editor** and insert **custom HTML** in the writing area.
-2. **Paste the following code** into the appropriate section:
-3. **Replace the following content**:
-   - **Cover Image URL**: Replace `Cover Image URL` with your song's cover image link.
-   - **Song Title**: Replace `Song Title` with the name of your song.
-   - **Creator Homepage Link**: Replace `Creator Homepage Link` with the link to the creator's homepage.
-   - **Song File URL**: Replace `Song File URL` with the link to your music file.
-
-### 📌 Example Code
-```html
-<div class="music-player-container">
-    <div class="music-player">
-        <div class="cover">
-            <img src="Cover Image URL" alt="Song Cover">
-        </div>
-        <div class="content">
-            <div class="info">
-                <div class="title">Song Title</div>
-                <p class="artist">
-                    <a href="Creator Homepage Link" target="_blank" class="artist-link">Creator Name</a>
-                </p>
-            </div>
-            <div class="audio-wrapper">
-                <audio controls>
-                    <source src="Song File URL" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </div>
-    </div>
-</div>
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).  
-此项目采用 [MIT 许可证](LICENSE) 许可。
