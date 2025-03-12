@@ -2,20 +2,15 @@
 
 这是一个自定义的音频播放器模块，旨在替代WordPress自带或HTML5自带的简易播放器控件。经过不断改进和AI的帮助，已非常符合我的使用习惯。
 
-This is a custom audio player module designed to replace the default WordPress or HTML5 audio player. It offers more personalized features and is well-suited to my usage habits.
-
 ## 使用方法 / How to Use
 
 1. 打开你的WordPress编辑器，在写作台插入自定义HTML。
-   / Open the WordPress editor and insert custom HTML in the writing area.
 2. 将以下代码粘贴到相应位置。
-   / Paste the following code into the appropriate section.
 3. 请替换代码中的以下内容：
-   / Please replace the following content in the code:
-   - **封面图片URL**：替换为你的歌曲封面图片的链接。 / **Cover Image URL**: Replace with the link to your song's cover image.
-   - **歌曲标题**：替换为你歌曲的标题。 / **Song Title**: Replace with the title of your song.
-   - **创作者主页链接**：替换为歌曲创作者的主页链接。 / **Creator Homepage Link**: Replace with the link to the creator's homepage.
-   - **歌曲文件URL**：替换为你的歌曲文件链接。 / **Song File URL**: Replace with the link to your song file.
+   - **封面图片URL**：替换为你的歌曲封面图片的链接。 
+   - **歌曲标题**：替换为你歌曲的标题。
+   - **创作者主页链接**：替换为歌曲创作者的主页链接。
+   - **歌曲文件URL**：替换为你的歌曲文件链接。
 
 ### HTML代码示例 / HTML Code Example
 
