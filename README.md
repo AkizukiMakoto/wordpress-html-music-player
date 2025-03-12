@@ -43,3 +43,39 @@
         </div>
     </div>
 </div>
+
+📜 English Version
+🎵 Introduction
+This is a custom audio player module designed to replace the default WordPress or HTML5 audio player.
+With continuous improvements and AI assistance, it now meets my needs perfectly.
+
+🔧 How to Use
+Open your WordPress editor and insert custom HTML in the writing area.
+Paste the following code into the appropriate section:
+Replace the following content:
+Cover Image URL: Replace Cover Image URL with your song's cover image link.
+Song Title: Replace Song Title with the name of your song.
+Creator Homepage Link: Replace Creator Homepage Link with the link to the creator's homepage.
+Song File URL: Replace Song File URL with the link to your music file.
+
+<div class="music-player-container">
+    <div class="music-player">
+        <div class="cover">
+            <img src="Cover Image URL" alt="Song Cover">
+        </div>
+        <div class="content">
+            <div class="info">
+                <div class="title">Song Title</div>
+                <p class="artist">
+                    <a href="Creator Homepage Link" target="_blank" class="artist-link">Creator Name</a>
+                </p>
+            </div>
+            <div class="audio-wrapper">
+                <audio controls>
+                    <source src="Song File URL" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
